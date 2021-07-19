@@ -2,7 +2,7 @@ APITests:
   max_executors: 10
   commands:
     - java -version
-    - ./gradlew test
+    - gradle test
 
   atomizers:
     - TEST: seq 1 2
