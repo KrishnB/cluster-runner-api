@@ -14,6 +14,11 @@ repositories {
     maven { url "http://palantir.bintray.com/releases" }
 }
 
+compileJava {
+    options.fork = true  // Fork your compilation into a child process
+    options.forkOptions.setMemoryMaximumSize("3g") // Set maximum memory to 4g
+}
+
 dependencies {
     // ekam
     implementation('com.testvagrant.ekam:ekam:0.1.2-beta')
