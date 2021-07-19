@@ -3,3 +3,6 @@ APITests:
   commands:
     - java -version
     - ./gradlew test
+
+  atomizers:
+    - TEST: seq 1 2
