@@ -1,7 +1,7 @@
 APITests:
   max_executors: 10
   commands:
-    - gradle test --tests=$TEST
+    - ./gradlew test --tests=$TEST
 
   atomizers:
-    - TEST: gradle tests -q
+    - TEST: ./gradlew tests -q
