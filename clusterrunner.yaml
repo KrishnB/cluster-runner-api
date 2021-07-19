@@ -1,5 +1,4 @@
 APITests:
-  max_executors: 10
   commands:
     - gradle test --tests=$TEST
 

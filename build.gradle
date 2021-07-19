@@ -198,13 +198,15 @@ clean {
 task tests() {
     outputs.upToDateWhen { false }
     doLast {
-        ["ekam.example.api.PostsServiceTest.getPostsShouldReturnAValue",
-         "ekam.example.api.PostsServiceTest.createANewPost",
-         "ekam.example.api.PostsServiceTest.updatePost",
-         "ekam.example.api.PostsServiceTest.editPost",
-         "ekam.example.api.PostsServiceTest.deletePost",
-         "ekam.example.api.ToDosServiceTests.getToDosShouldReturnAValue"].each {
-            println(it)
+        for(int i = 0; i< 100; i++) {
+            ["ekam.example.api.PostsServiceTest.getPostsShouldReturnAValue",
+             "ekam.example.api.PostsServiceTest.createANewPost",
+             "ekam.example.api.PostsServiceTest.updatePost",
+             "ekam.example.api.PostsServiceTest.editPost",
+             "ekam.example.api.PostsServiceTest.deletePost",
+             "ekam.example.api.ToDosServiceTests.getToDosShouldReturnAValue"].each {
+                println(it)
+            }
         }
     }
 }
