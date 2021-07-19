@@ -24,4 +24,4 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: API Tests
-        run: clusterrunner build git --url git@github.com:KrishnB/cluster-runner-api.git --branch main --job-name APITests
+        run: ~/.clusterrunner/dist/clusterrunner build git --url git@github.com:KrishnB/cluster-runner-api.git --branch main --job-name APITests
