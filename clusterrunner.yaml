@@ -1,7 +1,4 @@
 APITests:
-  setup_build:
-    - source ~/.bash_profile
-    - which gradle
   commands:
     - gradle test --tests=$TEST
 
