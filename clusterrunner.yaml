@@ -1,8 +1,7 @@
 APITests:
-  setup_build:
+  commands:
     - source ~/.bash_profile
     - which gradle
-  commands:
     - echo $TEST
 
   atomizers:
