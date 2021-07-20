@@ -3,4 +3,4 @@ APITests:
     - echo $TEST
 
   atomizers:
-    - TEST: 1 10
+    - TEST: seq 1 10
