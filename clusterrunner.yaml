@@ -1,5 +1,6 @@
 APITests:
   setup_build:
+    - source ~/.bash_profile
     - which gradle
   commands:
     - echo $TEST
