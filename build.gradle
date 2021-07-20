@@ -202,7 +202,7 @@ clean {
 task tests() {
     outputs.upToDateWhen { false }
     doLast {
-        for(int i = 0; i< 2; i++) {
+        for(int i = 0; i< 20; i++) {
             ["ekam.example.api.PostsServiceTest.getPostsShouldReturnAValue",
              "ekam.example.api.PostsServiceTest.createANewPost",
              "ekam.example.api.PostsServiceTest.updatePost",
