@@ -25,7 +25,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: API Tests
         run: ~/.clusterrunner/dist/clusterrunner build git --url git@github.com:KrishnB/cluster-runner-api.git --branch main --job-name APITests
-      - uses: actions/upload-artifact@v2
-        with:
-          name: build-results
-          path: build_results/
+      - name: Reports
+        if: always()
+        uses: actions/upload-artifact@v2
+          with:
+            name: build-results
+            path: build_results/
