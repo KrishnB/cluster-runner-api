@@ -1,6 +1,6 @@
 APITests:
   setup_build:
-    - source "$HOME/.sdkman/bin/sdkman-init.sh"
+    - which gradle
   commands:
     - echo $TEST
 
