@@ -30,4 +30,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build-results
-          path: build_results/
+          path: |
+            build_results/
+            allure-report/
+
