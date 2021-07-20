@@ -1,6 +1,6 @@
 APITests:
   commands:
-    - ./gradlew test --tests=$TEST
+    - gradle test --tests=$TEST
 
   atomizers:
-    - TEST: ./gradlew tests -q
+    - TEST: gradle tests -q
