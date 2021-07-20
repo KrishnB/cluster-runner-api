@@ -1,6 +1,6 @@
 APITests:
   commands:
-    - echo $TEST
+    - gradle test --tests=$TEST
 
   atomizers:
-    - TEST: seq 1 10
+    - TEST: gradle tests -q
