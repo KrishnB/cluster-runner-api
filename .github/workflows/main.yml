@@ -28,6 +28,6 @@ jobs:
       - name: Reports
         if: always()
         uses: actions/upload-artifact@v2
-          with:
-            name: build-results
-            path: build_results/
+        with:
+          name: build-results
+          path: build_results/
