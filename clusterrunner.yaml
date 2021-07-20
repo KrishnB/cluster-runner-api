@@ -2,7 +2,7 @@ APITests:
   setup_build:
     - source "$HOME/.sdkman/bin/sdkman-init.sh"
   commands:
-    - gradle test
+    - echo $TEST
 
   atomizers:
     - TEST: seq 1 2
