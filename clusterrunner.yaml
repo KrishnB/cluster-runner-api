@@ -1,8 +1,9 @@
 APITests:
-  commands:
+  setup_build:
     - source ~/.bash_profile
     - which gradle
-    - echo $TEST
+  commands:
+    - gradle test --tests=$TEST
 
   atomizers:
-    - TEST: seq 1 2
+    - TEST: gradle tests -q
