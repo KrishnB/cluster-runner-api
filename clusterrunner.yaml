@@ -1,7 +1,10 @@
 APITests:
-  commands:
+  setup_build:
+    - ls
     - chmod 777 gradlew
+    - gradle wrapper
     - ./gradlew
+  commands:
     - gradle test --tests=$TEST
 
   atomizers:
