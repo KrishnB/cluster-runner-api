@@ -1,8 +1,6 @@
 APITests:
   setup_build:
-    - ls
-    - chmod 777 gradlew
-    - gradle wrapper
+    - chmod -R 777 ./
     - ./gradlew
   commands:
     - gradle test --tests=$TEST
