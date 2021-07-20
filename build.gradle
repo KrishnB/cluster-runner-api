@@ -215,13 +215,25 @@ task tests() {
     }
 }
 
+task tags() {
+    outputs.upToDateWhen { false }
+    doLast {
+        for(int i = 0; i< 1; i++) {
+            ["posts",
+            "todos"].each {
+                println(it)
+            }
+        }
+    }
+}
+
 // Execution Rules
 tasks.runWebTests.dependsOn 'clean', 'build', 'createReportDir'
 tasks.runWebTestsOnCloud.dependsOn 'clean', 'build', 'createReportDir'
 tasks.runMobileTestsOnCloud.dependsOn 'clean', 'build', 'createReportDir'
-tasks.runApiTests.dependsOn 'clean', 'build', 'createReportDir'
+//tasks.runApiTests.dependsOn 'clean', 'build', 'createReportDir'
 tasks.build.mustRunAfter 'clean'
 tasks.runWebTests.finalizedBy('allureReport')
 tasks.runWebTestsOnCloud.finalizedBy('allureReport')
 tasks.runMobileTestsOnCloud.finalizedBy('allureReport')
-tasks.runApiTests.finalizedBy('allureReport')
+//tasks.runApiTests.finalizedBy('allureReport')

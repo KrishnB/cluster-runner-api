@@ -16,7 +16,7 @@ import java.util.List;
 import static com.testvagrant.ekam.commons.LayoutInitiator.Client;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Test(groups = "api")
+@Test(groups = {"api", "posts"})
 @Epic("Posts Service")
 @Feature("CRUD operations on Posts")
 public class PostsServiceTest extends APITest {

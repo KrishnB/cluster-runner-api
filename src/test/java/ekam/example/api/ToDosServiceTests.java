@@ -10,7 +10,7 @@ import java.util.List;
 
 import static com.testvagrant.ekam.commons.LayoutInitiator.Client;
 
-@Test(groups = "api")
+@Test(groups = {"api", "todos"})
 public class ToDosServiceTests extends APITest {
 
     public void getToDosShouldReturnAValue() {

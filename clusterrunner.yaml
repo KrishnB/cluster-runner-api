@@ -1,6 +1,19 @@
 APITests:
+  setup_build:
+    - gradle clean build
   commands:
     - gradle test --tests=$TEST
-
+  teardown_build:
+    - gradle allureReport
   atomizers:
     - TEST: gradle tests -q
+
+APITestsByGroups:
+  setup_build:
+    - gradle clean build
+  commands:
+    - gradle runApiTests -Dtags=$TAGS
+  teardown_build:
+    - gradle allureReport
+  atomizers:
+    - TAGS: gradle tags -q
