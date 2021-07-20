@@ -1,7 +1,6 @@
 APITests:
-#  setup_build:
-#    - chmod -R 777 ./
-#    - ./gradlew
+  setup_build:
+    - source "$HOME/.sdkman/bin/sdkman-init.sh"
   commands:
     - gradle test --tests=$TEST
 
