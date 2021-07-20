@@ -1,5 +1,7 @@
 APITests:
   commands:
+    - chmod 777 gradlew
+    - ./gradlew
     - gradle test --tests=$TEST
 
   atomizers:
